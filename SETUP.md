@@ -1,4 +1,4 @@
-_Project Setup_
+**Project Setup**
 
 Hey guys, heres a small guide on the ticketing system for our project and also creating feature branches. Mostly noted down from Suraj's weather dashboard session, if you have the time watch the first 30 mins of Suraj's advanced workshop, he explains and shows really well how to use the ticketing system and creating feature branches.
 
@@ -6,7 +6,7 @@ Hey guys, heres a small guide on the ticketing system for our project and also c
 
 Before we write any code, we have to go to the project tab on github and add tickets for different tasks in order to delegate tasks between our project members. We can add checklist of tasks and more information etc.
 
-Once we pick up a ticket, we convert it to an issue tick off checklist, drag to IN PROGRESS and close the issue once completed and it will automatically move to the DONE section.
+Once we pick up a ticket, we convert it to an issue and tick off the checklist of tasks, drag to IN PROGRESS and close the issue once completed and it will automatically move to the DONE section.
 
 **Feature Branch**
 
