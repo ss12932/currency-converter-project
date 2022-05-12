@@ -1,2 +1,2 @@
-# currency-converter-project
+# holiday app
 project group 3 project
