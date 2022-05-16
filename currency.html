@@ -6,20 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Currency</title>
     <script src="https://unpkg.com/tailwindcss-jit-cdn"></script>
+    <script type="tailwind-config">
+      {
+          theme: {
+            screens: {
+              <!-- our breakpoints, can change this to different values -->
+              'sm': '480px',
+              'md': '768px',
+              'lg': '976px',
+              'xl': '1280px',
+            },
+              extend: {
+                  colors: {
+                    <!-- example colors - will import our own chosen pallet -->
+                      'dark-blue-800': '#0A214C',
+                      'hulk-800': '#3D42F5',
+                  }
+              }
+          }
+      }
+    </script>
   </head>
   <body>
-    <header>
-      <div>
-        <img src=".jpg" alt="" />
-        <nav>
-          <a href="">Home</a>
-          <a href="">Team</a>
-          <a href="">Hotel</a>
-          <a href="">Currency</a>
+    <header class="header">
+      <div class="header-ctr">
+        <img src="#" alt="" class="site-logo" />
+        <nav class="nav-bar">
+          <a class="nav-links" href="">Home</a>
+          <a class="nav-links" href="">Hotels</a>
+          <a class="nav-links" href="">Currency</a>
+          <a class="nav-links" href="">Our Team</a>
+          <a class="nav-links" href="">Contact Us</a>
         </nav>
       </div>
     </header>
-    <main>
+    <main id="main">
       <div id="chart-container"></div>
 
     <section id="two-currency">
