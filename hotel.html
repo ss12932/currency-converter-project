@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hotel Section</title>
+    <script src="https://unpkg.com/tailwindcss-jit-cdn"></script>
+    <script type="tailwind-config">
+      {
+          theme: {
+            screens: {
+              <!-- our breakpoints, can change this to different values -->
+              'sm': '480px',
+              'md': '768px',
+              'lg': '976px',
+              'xl': '1280px',
+            },
+              extend: {
+                  colors: {
+                    <!-- example colors - will import our own chosen pallet -->
+                      'dark-blue-800': '#0A214C',
+                      'hulk-800': '#3D42F5',
+                  }
+              }
+          }
+      }
+    </script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-ctr">
+        <img src="#" alt="" class="site-logo" />
+        <nav class="nav-bar">
+          <a class="nav-links" href="">Home</a>
+          <a class="nav-links" href="">Hotels</a>
+          <a class="nav-links" href="">Currency</a>
+          <a class="nav-links" href="">Our Team</a>
+          <a class="nav-links" href="">Contact Us</a>
+        </nav>
+      </div>
+      <!-- Hotel Form section -->
+      <div class="hotel-form-ctr">
+        <form id="hotel-form">
+          <input
+            type="text"
+            id="hotel-form"
+            name="hotel-form"
+            placeholder="Search Place"
+          />
+          <!-- jQuery UI datepicker widget to select check in/out dates -->
+          <input type="text" id="datepicker" placeholder="Check In Date" />
+          <input type="text" id="datepicker" placeholder="Check Out Date" />
+          <input type="text" placeholder="Number of People" />
+          <button id="submit-btn" type="submit">Search Button</button>
+        </form>
+      </div>
+    </header>
+    <main id="main">
+      <!-- these sections will be dynamically rendered by JS using data from API -->
+      <section class="hotel-sctn">
+        <div class="title-img-ctr">
+          <h2>Hotel 1</h2>
+          <img src="#" alt="" />
+        </div>
+        <div class="info-ctr">
+          <p>Info Hotel 1</p>
+        </div>
+        <div class="price-book-ctr">
+          <div id="hotel-price">£200</div>
+          <button id="book-btn" type="submit">Book</button>
+        </div>
+      </section>
+      <section class="hotel-sctn">
+        <div class="title-img-ctr">
+          <h2>Hotel 2</h2>
+          <img src="#" alt="" />
+        </div>
+        <div class="info-ctr">
+          <p>Info Hotel 2</p>
+        </div>
+        <div class="price-book-ctr">
+          <div id="hotel-price">£200</div>
+          <button id="book-btn" type="submit">Book</button>
+        </div>
+      </section>
+      <section class="hotel-sctn">
+        <div class="title-img-ctr">
+          <h2>Hotel 3</h2>
+          <img src="#" alt="" />
+        </div>
+        <div class="info-ctr">
+          <p>Info Hotel 3</p>
+        </div>
+        <div class="price-book-ctr">
+          <div id="hotel-price">£200</div>
+          <button id="book-btn" type="submit">Book</button>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
