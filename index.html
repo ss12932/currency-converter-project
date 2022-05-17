@@ -45,7 +45,7 @@
       }
     </style> -->
   </head>
-  <body>
+  <body class="min-h-screen">
     <header class="header flex justify-between py-6 px-4 bg-white shadow-lg">
       <div class="flex w-1/2 justify-between">
         <!-- Logo -->
@@ -61,8 +61,8 @@
         <a href="">About Us</a>
       </nav>
     </header>
-    <main class=>
-      <section>
+    <main class="flex-col">
+      <section class="h-screen flex flex-col justify-center items-center">
         <div class="flex mt-4 w-full">
           <!-- Currency conversion Form -->
           <div class="w-full">
@@ -73,7 +73,7 @@
             >
               <div>
                 <label for="input-currency">From</label>
-                <input type="text" placeholder="Enter Amount" />
+                <input type="text" id="input-amount" placeholder="Enter Amount" />
                 <select class="mr-6" name="currency" id="currency">
                   <option value="GBP">GBP</option>
                   <option value="USD">USD</option>
@@ -86,7 +86,7 @@
               </div>
               <div>
                 <label for="output-currency">To</label>
-                <input type="text" placeholder="Enter Amount" />
+                <input type="text" id="output-amount" placeholder="Enter Amount" />
                 <select name="currency" id="currency">
                   <option value="GBP">GBP</option>
                   <option value="USD">USD</option>
@@ -105,18 +105,30 @@
           </div>
         </div>
        
-        <div>
-          <div>Euro News</div>
-          <div>GBP News</div>
+        <div class="w-full grid grid-cols-2 text-center border py-10">
+          <div>
+            <!-- will insert card component here -->
+            Euro News</div>
+          <div>
+               <!-- will insert card component here -->
+            GBP News</div>
         </div>
       </section>
-      <section>
-        <div><h2>Charts</h2></div>
-        <button>Go To Top</button>
-        <div>Chart 1</div>
-        <div>Chart 2</div>
+      <section class="flex flex-col w-full flex-1 h-screen" id="chart-section">
+        <div>
+          <h2 class="text-6xl">Charts</h2>
+          <div class="flex flex-row w-full justify-around">
+            <div>
+                <!-- chart will be embedded in here -->
+                Chart 1</div>
+              <div>
+                <!-- chart will be embedded in here -->
+                Chart 2</div>
+          </div>
+          </div>
+        </div>
       </section>
     </main>
-    <footer>&copy; Money Mail All Rights Reserved.</footer>
+    <footer class="py-6 bg-blue-500">&copy; Money Mail All Rights Reserved.</footer>
   </body>
 </html>
