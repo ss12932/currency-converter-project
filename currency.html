@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Currency</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="tailwind-config">
+      {
+          theme: {
+            screens: {
+              <!-- our breakpoints, can change this to different values -->
+              'sm': '480px',
+              'md': '768px',
+              'lg': '976px',
+              'xl': '1280px',
+            },
+              extend: {
+                  colors: {
+                    <!-- example colors - will import our own chosen pallet -->
+                      'sand-yellow': '#fffac0',
+                      'sunset-orange': '#ffd79a',
+                      'sea-blue': '#73b9d7',
+                      'sky-blue': '#9de6e8',
+                  }
+              }
+          }
+      }
+    </script>
+    <!-- <style type="text/tailwindcss">
+      @layer utilities {
+        /* all custom css goes here */
+        .example-class {
+          background-color: red;
+        }
+      }
+    </style> -->
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-ctr">
+        <img src="#" alt="" class="site-logo" />
+        <nav class="nav-bar">
+          <a class="nav-links" href="">Home</a>
+          <a class="nav-links" href="">Hotels</a>
+          <a class="nav-links" href="">Currency</a>
+          <a class="nav-links" href="">Our Team</a>
+          <a class="nav-links" href="">Contact Us</a>
+        </nav>
+      </div>
+    </header>
+    <main id="main">
+      <div id="chart-container"></div>
+
+    <section id="two-currency">
+        <input type="number" min="1" step="any" placeholder="$">
+        <label for="select-currency-from">From:</label>
+        <select name="currency-from" id="currency-from">
+            <optgroup label="Convert your currency from"></optgroup>
+            <option value="USD">USD</option>
+            <option value="GBP">GBP</option>
+            <option value="EUR">EUR</option>
+            <option value="AUD">AUD</option>
+            <option value="JPY">JPY</option>
+        </select>
+        <label for="select-currency-to">To:</label>
+        <select name="currency-to" id="currency-to">
+            <optgroup label="to"></optgroup>
+            <option value="USD">USD</option>
+            <option value="GBP">GBP</option>
+            <option value="EUR">EUR</option>
+            <option value="AUD">AUD</option>
+            <option value="JPY">JPY</option>
+        </select>
+    
+        <button id="currency-exchange">Confirm</button>
+    </section>
+
+      <div>
+        <p id="coversion-info"></p>
+      </div>
+
+    </section>
+    </main>
+  </body>
+</html>
