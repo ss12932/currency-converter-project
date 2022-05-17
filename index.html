@@ -45,7 +45,8 @@
       }
     </style> -->
   </head>
-  <body class="min-h-screen">
+  <body>
+    <!-- Header -->
     <header class="header flex justify-between py-6 px-4 bg-white shadow-lg">
       <div class="flex w-1/2 justify-between">
         <!-- Logo -->
@@ -57,24 +58,27 @@
         <!-- Moment.js date and time -->
         <div>Date Time</div>
       </div>
+      <!-- Right Hand Side Nav Bar -->
       <nav>
         <a href="">About Us</a>
       </nav>
     </header>
+
+    <!-- Main -->
     <main class="flex-col">
-      <section>
-        <div class="flex mt-4 w-full">
-          <!-- Currency conversion Form -->
-          <div class="w-full">
+      <!-- Currency Section -->
+      <section class="min-h-screen">
+        <div class="flex flex-col mt-4 mx-20 rounded-t-lg">
+            <!-- Currency conversion Form -->
             <form
-              class="bg-blue-500 py-14 w-full mt-10 mx-2 flex justify-around"
+              class=" py-14 w-full mt-10 mx-2 flex justify-around rounded-t-sm border"
               id="currency-form"
               action=""
             >
               <div>
                 <label for="input-currency">From</label>
-                <input type="text" id="input-amount" placeholder="Enter Amount" />
-                <select class="mr-6" name="currency" id="currency">
+                <input class="border" type="text" id="input-amt" placeholder="Enter Amount" />
+                <select class="mr-6 border" name="currency" id="currency">
                   <option value="GBP">GBP</option>
                   <option value="USD">USD</option>
                   <option value="AUD">AUD</option>
@@ -86,8 +90,8 @@
               </div>
               <div>
                 <label for="output-currency">To</label>
-                <input type="text" id="output-amount" placeholder="Enter Amount" />
-                <select name="currency" id="currency">
+                <input class="border" type="text" id="output-amt" placeholder="Enter Amount" />
+                <select class="border" name="currency" id="currency">
                   <option value="GBP">GBP</option>
                   <option value="USD">USD</option>
                   <option value="AUD">AUD</option>
@@ -99,13 +103,12 @@
               </div>
             </form>
             <div
-            class="w-full bg-blue-500 flex py-6 mx-2 justify-center items-center text-white"
+            class="w-full flex py-6 mx-2 justify-center items-center text-white rounded-b-sm border"
                     >Conversion Info
                     </div>
-          </div>
         </div>
        
-        <div class="w-full grid grid-cols-2 text-center border py-10">
+        <div class="flex-1 w-full grid grid-cols-2 my-10 text-center border py-10">
           <div>
             <!-- will insert card component here -->
             Euro News</div>
@@ -114,7 +117,9 @@
             GBP News</div>
         </div>
       </section>
-      <section class="flex flex-col w-full flex-1 h-[92vh]" id="chart-section">
+
+      <!-- Charts Section -->
+      <section class="w-full h-[92vh] border" id="chart-section">
         <div>
           <h2 class="text-6xl">Charts</h2>
           <div class="flex flex-row w-full justify-around">
@@ -129,6 +134,6 @@
         </div>
       </section>
     </main>
-    <footer class="py-6 bg-blue-500">&copy; Money Mail All Rights Reserved.</footer>
+    <footer class="py-6 border">&copy; Money Mail All Rights Reserved.</footer>
   </body>
 </html>
