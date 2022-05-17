@@ -46,34 +46,65 @@
     </style> -->
   </head>
   <body>
-    <header class="header">
-      <div>
+    <header class="header flex justify-between py-6 px-4 bg-white shadow-lg">
+      <div class="flex w-1/2 justify-between">
         <!-- Logo -->
-        <div></div>
+        <div class="flex">
+          <div>Logo</div>
+          <div class="ml-2"><p>Money Mail</p></div>
+        </div>
 
         <!-- Moment.js date and time -->
-        <div></div>
+        <div>Date Time</div>
       </div>
       <nav>
         <a href="">About Us</a>
       </nav>
     </header>
-    <main>
+    <main class=>
       <section>
-        <div>
+        <div class="flex mt-4 w-full">
           <!-- Currency conversion Form -->
-          <form id="currency-form" action="">
-            <label for="input-currency">From</label>
-            <input type="text" placeholder="Enter Amount" />
-            <label for="output-currency">To</label>
-            <input type="text" placeholder="Enter Amount" />
-          </form>
-          <!-- View Charts Button -->
-          <button>View Charts</button>
+          <div class="w-full">
+            <form
+              class="bg-blue-500 py-14 w-full mt-10 mx-2 flex justify-around"
+              id="currency-form"
+              action=""
+            >
+              <div>
+                <label for="input-currency">From</label>
+                <input type="text" placeholder="Enter Amount" />
+                <select class="mr-6" name="currency" id="currency">
+                  <option value="GBP">GBP</option>
+                  <option value="USD">USD</option>
+                  <option value="AUD">AUD</option>
+                  <option value="EUR">EUR</option>
+                  <option value="EUR">HKD</option>
+                  <option value="EUR">JPY</option>
+                  <option value="EUR">WON</option>
+                </select>
+              </div>
+              <div>
+                <label for="output-currency">To</label>
+                <input type="text" placeholder="Enter Amount" />
+                <select name="currency" id="currency">
+                  <option value="GBP">GBP</option>
+                  <option value="USD">USD</option>
+                  <option value="AUD">AUD</option>
+                  <option value="EUR">EUR</option>
+                  <option value="EUR">HKD</option>
+                  <option value="EUR">JPY</option>
+                  <option value="EUR">WON</option>
+                </select>
+              </div>
+            </form>
+            <div
+            class="w-full bg-blue-500 flex py-6 mx-2 justify-center items-center text-white"
+                    >Conversion Info
+                    </div>
+          </div>
         </div>
-        <div>
-          <p>Conversion Amount</p>
-        </div>
+       
         <div>
           <div>Euro News</div>
           <div>GBP News</div>
