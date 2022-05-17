@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Money Save Homepage</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="tailwind-config">
+      {
+          theme: {
+            screens: {
+              <!-- our breakpoints, can change this to different values -->
+              'sm': '480px',
+              'md': '768px',
+              'lg': '976px',
+              'xl': '1280px',
+            },
+              extend: {
+                  colors: {
+                    <!-- example colors - will import our own chosen pallet -->
+                      'sand-yellow': '#fffac0',
+                      'sunset-orange': '#ffd79a',
+                      'sea-blue': '#73b9d7',
+                      'sky-blue': '#9de6e8',
+                  }
+              }
+          }
+      }
+    </script>
+    <!-- <style type="text/tailwindcss">
+      @layer utilities {
+        /* all custom css goes here */
+        .example-class {
+          background-color: red;
+        }
+      }
+    </style> -->
+</head>
+<body>
+    <header>
+      <h1="logo">Money<span>Save</span></h1>
+      <div class="header-ctr">
+        <img src="#" alt="" class="site-logo" />
+        <nav class="nav-bar">
+          <a class="nav-links" href="">Home</a>
+          <a class="nav-links" href="">Hotels</a>
+          <a class="nav-links" href="">Currency</a>
+          <a class="nav-links" href="">Our Team</a>
+          <a class="nav-links" href="">Contact Us</a>
+        </nav>
+      </div>
+      </header>
+
+      
+<!--- Description Section  --->
+
+<div class="description">
+        <p>MoneySave! Helping you to make the most of your holiday.... </p>
+</div>  
+
+<!--- section displaying hotel form on the left-->  
+
+<section>
+  <section class ="hotel-sctn">
+    <div class="card">
+    <h4>Find Your Next Hotel</h4>
+        <img src=".JPG" alt=""></a>
+        <input type="text" placeholder="Search 1000's of Hotels" />
+        <button id="submit-btn" type="submit">Search</button>
+        <p style="text-align: center;"></p>
+      </div>
+    </div>
+
+    <!--- Main section , Pictures of hotels and text-->
+    <div class="card"></div>
+      <div id ="main"></div>
+        <h2>Explore Hotels...</h2>
+        <img src=".jpg" alt="">
+        <img src=".jpg" alt="">
+        <img src=".jpg" alt="">
+      <div class="row">
+        <p style="text-align: center;"></p>
+      </div>
+    </div>
+
+    <!--- Currency Section --->
+
+    <section class ="currency-sctn">
+      <div class="card">
+        <h3>Live Currency Converter</h3>
+          <img src=".JPG" alt=""></a>
+          <input type="text" placeholder="GBP, AUD..." />
+          <p>to</p>
+          <input type="text" placeholder="USD, AED..." />
+          <p style="text-align: center;"></p>
+        </div>
+      </div> 
+  </section>
+</section>
+
+<footer>
+  <p>💸 Money Save 💸</p>
+   <a class="button-two" href="">Contact us</a>
+</footer>
+</body>
+</html>
