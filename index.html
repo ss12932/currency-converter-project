@@ -5,6 +5,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Money Save Homepage</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="tailwind-config">
+      {
+          theme: {
+            screens: {
+              <!-- our breakpoints, can change this to different values -->
+              'sm': '480px',
+              'md': '768px',
+              'lg': '976px',
+              'xl': '1280px',
+            },
+              extend: {
+                  colors: {
+                    <!-- example colors - will import our own chosen pallet -->
+                      'sand-yellow': '#fffac0',
+                      'sunset-orange': '#ffd79a',
+                      'sea-blue': '#73b9d7',
+                      'sky-blue': '#9de6e8',
+                  }
+              }
+          }
+      }
+    </script>
+    <!-- <style type="text/tailwindcss">
+      @layer utilities {
+        /* all custom css goes here */
+        .example-class {
+          background-color: red;
+        }
+      }
+    </style> -->
 </head>
 <body>
     <header>
