@@ -5,7 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Money Save Homepage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com/css2?family=Cormorant:wght@400;500;600;700&display=swap">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <script src="https://cdn.tailwindcss.com"></script>
+
     <script>
       tailwind.config = {
         theme: {
@@ -16,6 +19,9 @@
             xl: "1280px",
           },
           extend: {
+            fontFamily: {
+        'cormorant': ['"Cormorant"', 'serif']
+      },
             colors: {
               "sea-blue": "#73b9d7",
               "sky-blue": "#9de6e8",
@@ -44,21 +50,21 @@
     </style> -->
     <script src="index.js"></script>
   </head>
-  <body class="flex flex-col min-h-screen">
+  <body class="flex flex-col min-h-screen font-cormorant">
     <!-- Header -->
-    <header class="header flex justify-between py-6 px-4 bg-white shadow-lg">
+    <header class="header flex justify-between py-6 px-4 bg-white shadow-lg text-russian-violet">
       <div class="flex w-1/2 justify-between">
         <!-- Logo -->
         <div class="flex">
-          <div>Logo</div>
-          <div class="ml-2"><p>Money Mail</p></div>
+          <div class="place-self-center">Logo</div>
+          <div class="ml-2 text-6xl"><p>Money Mail</p></div>
         </div>
 
         <!-- Moment.js date and time -->
-        <div>Date Time</div>
+        <div class="place-self-center text-2xl">Date Time</div>
       </div>
       <!-- Right Hand Side Nav Bar -->
-      <nav>
+      <nav class="place-self-center hover:underline text-2xl">
         <a href="">About Us</a>
       </nav>
     </header>
@@ -70,14 +76,14 @@
         <div class="flex flex-col mt-4 mx-20 rounded-t-lg">
             <!-- Currency conversion Form -->
             <form
-              class=" py-14 w-full mt-10 mx-2 flex flex-col md:flex-row md:justify-around rounded-t-sm border bg-sea-blue"
+              class=" py-14 w-full mt-10 mx-2 flex flex-col md:flex-row md:justify-around rounded-t-sm border bg-purple-mountain-majesty text-white"
               id="currency-form"
               action=""
             >
               <div>
-                <label class="inline-block w-10" for="input-currency">From:</label>
+                <label class="inline-block w-10 font-semibold" for="input-currency">From:</label>
                 <input class="border" type="text" id="input-amt" placeholder="Enter Amount" />
-                <select class="mb-6 md:mr-6 border" name="currency" id="currency">
+                <select class="mb-6 md:mr-6 border text-black" name="currency" id="currency">
                   <option value="GBP">GBP</option>
                   <option value="USD">USD</option>
                   <option value="AUD">AUD</option>
@@ -88,9 +94,9 @@
                 </select>
               </div>
               <div>
-                <label class="inline-block w-10" for="output-currency">To:</label>
+                <label class="inline-block w-10 font-semibold" for="output-currency">To:</label>
                 <input class="border" type="text" id="output-amt" placeholder="Enter Amount" />
-                <select class="border" name="currency" id="currency">
+                <select class="border text-black" name="currency" id="currency">
                   <option value="GBP">GBP</option>
                   <option value="USD">USD</option>
                   <option value="AUD">AUD</option>
