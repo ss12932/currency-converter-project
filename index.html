@@ -5,14 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Money Save Homepage</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com/css2?family=Cormorant:wght@400;500;600;700&display=swap">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <script src="https://cdn.tailwindcss.com"></script>
+
     <script>
       tailwind.config = {
         theme: {
-
           screens: {
             sm: "480px",
             md: "768px",
@@ -28,7 +27,7 @@
               "sky-blue": "#9de6e8",
               "peach-puff": "#f9dbbdff",
               "light-pink": "#ffa5abff",
-              "blush": "#da627dff",
+              blush: "#da627dff",
               "maroon-x-11": "#a53860ff",
               "dark-sienna": "#450920ff",
               "russian-violet": "#231942ff",
@@ -49,25 +48,24 @@
         }
       }
     </style> -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.3/moment.min.js" integrity="sha512-x/vqovXY/Q4b+rNjgiheBsA/vbWA3IVvsS8lkQSX1gQ4ggSJx38oI2vREZXpTzhAv6tNUaX81E7QBBzkpDQayA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="index.js"></script>
   </head>
-  <body class="flex flex-col min-h-screen">
+  <body class="flex flex-col min-h-screen font-cormorant">
     <!-- Header -->
-    <header class="header bg-blue-500 flex justify-between py-6 px-4 bg-white shadow-lg">
+    <header class="header flex justify-between py-6 px-4 bg-white shadow-lg bg-russian-violet text-white">
       <div class="flex w-1/2 justify-between">
         <!-- Logo -->
         <div class="flex">
-          <div>Logo</div>
-          <div class="ml-2 font-cormorant"><p>Money Mail</p></div>
+          <div class="place-self-center">Logo</div>
+          <div class="ml-2 text-6xl"><p>Money Mail</p></div>
         </div>
 
         <!-- Moment.js date and time -->
-        <div>Date Time</div>
+        <div class="place-self-center text-2xl">Date Time</div>
       </div>
       <!-- Right Hand Side Nav Bar -->
-      <nav>
-        <a href="">About Us</a>
+      <nav class="place-self-center hover:underline text-2xl pr-20">
+        <a href="./team.html">About Us</a>
       </nav>
     </header>
 
@@ -75,17 +73,17 @@
     <main class="flex-1 flex flex-col h-full">
       <!-- Currency Section -->
       <section>
-        <div class="flex flex-col mt-4 mx-20 rounded-t-lg">
+        <div class="flex flex-col mt-4 mx-20">
             <!-- Currency conversion Form -->
             <form
-              class=" py-14 w-full mt-10 mx-2 flex flex-col md:flex-row md:justify-around rounded-t-sm border bg-sea-blue"
+              class=" py-14 w-full mt-10 mx-2 flex flex-col md:flex-row md:justify-around border rounded-xl bg-purple-mountain-majesty text-white bg-[url('https://images.unsplash.com/photo-1580519542036-c47de6196ba5?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471')]"
               id="currency-form"
               action=""
             >
               <div>
-                <label class="inline-block w-10" for="input-currency">From:</label>
+                <label class="inline-block w-10 font-semibold" for="input-currency">From:   </label>
                 <input class="border" type="text" id="input-amt" placeholder="Enter Amount" />
-                <select class="mb-6 md:mr-6 border" name="currency" id="currency">
+                <select class="mb-6 md:mr-6 border text-black" name="currency" id="currency">
                   <option value="GBP">GBP</option>
                   <option value="USD">USD</option>
                   <option value="AUD">AUD</option>
@@ -96,9 +94,9 @@
                 </select>
               </div>
               <div>
-                <label class="inline-block w-10" for="output-currency">To:</label>
+                <label class="inline-block w-10 font-semibold" for="output-currency">To:</label>
                 <input class="border" type="text" id="output-amt" placeholder="Enter Amount" />
-                <select class="border" name="currency" id="currency">
+                <select class="border text-black" name="currency" id="currency">
                   <option value="GBP">GBP</option>
                   <option value="USD">USD</option>
                   <option value="AUD">AUD</option>
@@ -115,7 +113,7 @@
                     </div>
         </div>
        
-        <div class="flex-1 w-full grid grid-cols-1 gap-6 md:grid-cols-2 my-10 text-center border py-10">
+        <div class="flex-1 w-full grid grid-cols-1 gap-6 md:grid-cols-2 my-10 text-center border py-10 myown">
           <div>
             <!-- will insert card component here -->
             Euro News</div>
