@@ -52,7 +52,7 @@
   </head>
   <body class="flex flex-col min-h-screen font-cormorant">
     <!-- Header -->
-    <header class="header flex justify-between py-6 px-4 bg-white shadow-lg text-russian-violet">
+    <header class="header flex justify-between py-6 px-4 bg-white shadow-lg bg-russian-violet text-white">
       <div class="flex w-1/2 justify-between">
         <!-- Logo -->
         <div class="flex">
@@ -64,7 +64,7 @@
         <div class="place-self-center text-2xl">Date Time</div>
       </div>
       <!-- Right Hand Side Nav Bar -->
-      <nav class="place-self-center hover:underline text-2xl">
+      <nav class="place-self-center hover:underline text-2xl hover:text-russian-violet pr-20">
         <a href="">About Us</a>
       </nav>
     </header>
@@ -73,15 +73,15 @@
     <main class="flex-1 flex flex-col h-full">
       <!-- Currency Section -->
       <section>
-        <div class="flex flex-col mt-4 mx-20 rounded-t-lg">
+        <div class="flex flex-col mt-4 mx-20">
             <!-- Currency conversion Form -->
             <form
-              class=" py-14 w-full mt-10 mx-2 flex flex-col md:flex-row md:justify-around rounded-t-sm border bg-purple-mountain-majesty text-white"
+              class=" py-14 w-full mt-10 mx-2 flex flex-col md:flex-row md:justify-around border rounded-xl bg-purple-mountain-majesty text-white bg-[url('https://images.unsplash.com/photo-1580519542036-c47de6196ba5?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471')]"
               id="currency-form"
               action=""
             >
               <div>
-                <label class="inline-block w-10 font-semibold" for="input-currency">From:</label>
+                <label class="inline-block w-10 font-semibold" for="input-currency">From:   </label>
                 <input class="border" type="text" id="input-amt" placeholder="Enter Amount" />
                 <select class="mb-6 md:mr-6 border text-black" name="currency" id="currency">
                   <option value="GBP">GBP</option>
