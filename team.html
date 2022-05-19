@@ -16,6 +16,9 @@
             xl: "1280px",
           },
           extend: {
+            fontFamily: {
+              cormorant: ['"Cormorant"', "serif"],
+            },
             colors: {
               "sea-blue": "#73b9d7",
               "sky-blue": "#9de6e8",
@@ -34,16 +37,16 @@
         },
       };
     </script>
-    <!-- <style type="text/tailwindcss">
+    <style type="text/tailwindcss">
       @layer utilities {
         /* all custom css goes here */
         .example-class {
           background-color: red;
         }
       }
-    </style> -->
+    </style>
   </head>
-  <body class="min-h-screen bg-blue-500">
+  <body class="min-h-screen">
     <header class="header flex justify-between py-6 px-4 bg-white shadow-lg">
       <div class="flex w-1/2 justify-between">
         <!-- Logo -->
@@ -61,70 +64,66 @@
     </header>
     <!-- main section for meet our team -->
     <main id="main">
-      <div class="teammate">
-        <img src="" alt="" />
-        <p>Amina</p>
-        <ul>
-          <li>📩 Email: <a href="mailto:"></a></li>
-          <li>
-            💻 Github page: <a href="https://github.com/" target="_blank"></a>
-          </li>
-        </ul>
+      <div>
+        <h1 class="text-5xl flex justify-center py-8">Our Development Team</h1>
       </div>
-
-      <div class="teammate">
-        <img src="" alt="" />
-        <p>Angela</p>
-        <ul>
-          <li>📩 Email: <a href="mailto:"></a></li>
-          <li>
-            💻 Github page: <a href="https://github.com/" target="_blank"></a>
-          </li>
-        </ul>
-      </div>
-
-      <div class="teammate">
-        <img src="" alt="" />
-        <p>Keyur</p>
-        <ul>
-          <li>📩 Email: <a href="mailto:"></a></li>
-          <li>
-            💻 Github page: <a href="https://github.com/" target="_blank"></a>
-          </li>
-        </ul>
-      </div>
-
-      <div class="teammate">
-        <img src="" alt="" />
-        <p>Natasha</p>
-        <ul>
-          <li>📩 Email: <a href="mailto:"></a></li>
-          <li>
-            💻 Github page: <a href="https://github.com/" target="_blank"></a>
-          </li>
-        </ul>
-      </div>
-
-      <div class="teammate">
-        <img src="" alt="" />
-        <p>Shola</p>
-        <ul>
-          <li>📩 Email: <a href="mailto:"></a></li>
-          <li>
-            💻 Github page: <a href="https://github.com/" target="_blank"></a>
-          </li>
-        </ul>
-      </div>
-
-      <div class="teammate">
-        <img src="" alt="" />
-        <p>Sinh</p>
-        <ul>
-          <li>📩 Email: <a href="mailto:"></a></li>
-          <li>
-            💻 Github page: <a href="https://github.com/" target="_blank"></a>
-          </li>
-        </ul>
+      <div class="grid grid-cols md:grid-cols-2 xl:grid-cols-3 gap-4">
+        <div
+          class="flex teammate border shadow-lg rounded h-[32rem] max-w-md mt-6"
+        >
+          <div class="flex">
+            <p>Amina</p>
+          </div>
+          <div>
+            <ul>
+              <li>📩 Email: <a href="mailto:"></a></li>
+              <li>
+                💻 Github page:
+                <a href="https://github.com/" target="_blank"></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="teammate border shadow-lg rounded h-[32rem] max-w-md mt-6">
+          <img src="" alt="" />
+          <p>Angela</p>
+          <ul>
+            <li>📩 Email: <a href="mailto:"></a></li>
+            <li>
+              💻 Github page: <a href="https://github.com/" target="_blank"></a>
+            </li>
+          </ul>
+        </div>
+        <div class="teammate border shadow-lg rounded h-[32rem] max-w-md mt-6">
+          <img src="" alt="" />
+          <p>Keyur</p>
+          <ul>
+            <li>📩 Email: <a href="mailto:"></a></li>
+            <li>
+              💻 Github page: <a href="https://github.com/" target="_blank"></a>
+            </li>
+          </ul>
+        </div>
+        <div class="teammate border shadow-lg rounded h-[32rem] max-w-md mt-6">
+          <img src="" alt="" />
+          <p>Natasha</p>
+          <ul>
+            <li>📩 Email: <a href="mailto:"></a></li>
+            <li>
+              💻 Github page: <a href="https://github.com/" target="_blank"></a>
+            </li>
+          </ul>
+        </div>
+        <div class="teammate border shadow-lg rounded h-[32rem] max-w-md mt-6">
+          <img src="" alt="" />
+          <p>Sinh</p>
+          <ul>
+            <li>📩 Email: <a href="mailto:"></a></li>
+            <li>
+              💻 Github page: <a href="https://github.com/" target="_blank"></a>
+            </li>
+          </ul>
+        </div>
       </div>
     </main>
   </body>
