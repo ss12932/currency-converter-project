@@ -6,35 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Meet Our Team</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script type="tailwind-config">
-      {
-          theme: {
-            screens: {
-              <!-- our breakpoints, can change this to different values -->
-              'sm': '480px',
-              'md': '768px',
-              'lg': '976px',
-              'xl': '1280px',
+    <script>
+      tailwind.config = {
+        theme: {
+          screens: {
+            sm: "480px",
+            md: "768px",
+            lg: "976px",
+            xl: "1280px",
+          },
+          extend: {
+            colors: {
+              "sea-blue": "#73b9d7",
+              "sky-blue": "#9de6e8",
+              "peach-puff": "#f9dbbdff",
+              "light-pink": "#ffa5abff",
+              blush: "#da627dff",
+              "maroon-x-11": "#a53860ff",
+              "dark-sienna": "#450920ff",
+              "russian-violet": "#231942ff",
+              "purple-navy": "#5e548eff",
+              "purple-mountain-majesty": "#9f86c0ff",
+              lilac: "#be95c4ff",
+              "pink-lavender": "#e0b1cbff",
             },
-              extend: {
-                  colors: {
-                    <!-- example colors - will import our own chosen pallet -->
-                    'sea-blue': '#73b9d7',
-                    'sky-blue': '#9de6e8',
-                    'peach-puff': '#f9dbbdff',
-                    'light-pink': '#ffa5abff',
-                    'blush': '#da627dff',
-                    'maroon-x-11': '#a53860ff',
-                    'dark-sienna': '#450920ff',
-                    'russian-violet': '#231942ff',
-                    'purple-navy': '#5e548eff',
-                    'purple-mountain-majesty': '#9f86c0ff',
-                    'lilac': '#be95c4ff',
-                    'pink-lavender': '#e0b1cbff',
-                  }
-              }
-          }
-      }
+          },
+        },
+      };
     </script>
     <!-- <style type="text/tailwindcss">
       @layer utilities {
