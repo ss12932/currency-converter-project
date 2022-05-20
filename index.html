@@ -27,9 +27,7 @@
               "sky-blue": "#9de6e8",
               "peach-puff": "#f9dbbdff",
               "light-pink": "#ffa5abff",
-
               "blush": "#da627dff",
-
               "maroon-x-11": "#a53860ff",
               "dark-sienna": "#450920ff",
               "russian-violet": "#231942ff",
@@ -79,14 +77,14 @@
         <div class="flex flex-col mt-4 mx-20">
             <!-- Currency conversion Form -->
             <form
-              class=" py-14 w-full mt-10 mx-2 flex flex-col md:flex-row md:justify-around border rounded-xl bg-purple-mountain-majesty text-white bg-[url('https://images.unsplash.com/photo-1580519542036-c47de6196ba5?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471')]"
+              class="py-14 w-full mt-10 mx-2 flex flex-col md:flex-row md:justify-around border rounded-xl bg-purple-mountain-majesty text-white 
+              bg-[url('https://images.unsplash.com/photo-1580519542036-c47de6196ba5?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471')]"
               id="currency-form"
-              action=""
-            >
+              action="">
               <div>
-                <label class="inline-block w-10 font-semibold" for="input-currency">From:   </label>
-                <input class="border" type="text" id="input-amt" placeholder="Enter Amount" />
-                <select class="mb-6 md:mr-6 border text-black" name="currency" id="currency">
+                <label class="inline-block w-10 font-semibold" for="input-currency">From:</label>
+                <input class="border rounded-md" type="text" id="input-amt" placeholder=" Enter Amount" />
+                <select class="mb-6 md:mr-6 border text-black rounded-md p-0.5" name="currency" id="currency">
                   <option value="GBP">GBP</option>
                   <option value="USD">USD</option>
                   <option value="AUD">AUD</option>
@@ -98,8 +96,8 @@
               </div>
               <div>
                 <label class="inline-block w-10 font-semibold" for="output-currency">To:</label>
-                <input class="border" type="text" id="output-amt" placeholder="Enter Amount" />
-                <select class="border text-black" name="currency" id="currency">
+                <input class="border rounded-md" type="text" id="output-amt" placeholder=" Enter Amount" />
+                <select class="border text-black rounded-md p-0.5" name="currency" id="currency">
                   <option value="GBP">GBP</option>
                   <option value="USD">USD</option>
                   <option value="AUD">AUD</option>
