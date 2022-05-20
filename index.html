@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Money Save Homepage</title>
+    <title>Money Mail Homepage</title>
     <link rel="preconnect" href="https://fonts.googleapis.com/css2?family=Cormorant:wght@400;500;600;700&display=swap">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <script src="https://cdn.tailwindcss.com"></script>
@@ -77,7 +77,7 @@
         <div class="flex flex-col mt-4 mx-20">
             <!-- Currency conversion Form -->
             <form
-              class="justify-center py-14 w-full mt-10 mx-2 flex flex-col md:flex-row border rounded-xl bg-purple-mountain-majesty text-white 
+              class="justify-center py-14 w-full mt-10 flex flex-col md:flex-row border rounded-xl bg-purple-mountain-majesty text-white 
               bg-[url('https://images.unsplash.com/photo-1580519542036-c47de6196ba5?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471')]"
               id="currency-form"
               action="">
@@ -107,7 +107,7 @@
                   <option value="EUR">WON</option>
                 </select>
               </div>
-              <div class="pl-5">
+              <div class="pl-10">
                 <button 
                 class="inline-block w-20 font-semibold bg-russian-violet rounded-md border border-russian-violet" 
                 id="confirm-btn">Confirm
@@ -115,17 +115,21 @@
               </div>
             </form>
             <div
-            class="w-full flex py-6 mx-2 justify-center items-center text-russian-violet rounded-b-sm border"
+            class="w-full flex py-6 justify-center items-center text-russian-violet rounded-b-sm border"
                     >Conversion Info
                     </div>
                   </div>
-        <div class="flex-1 w-full grid grid-cols-1 gap-6 md:grid-cols-2 my-10 text-center border py-10 myown">
-          <div>
-            <!-- will insert card component here -->
-            Euro News</div>
-          <div>
-            <!-- will insert card component here -->
-            GBP News</div>
+        <div class="flex-1 grid md:grid-cols-2 my-10 content-center text-center border py-10 myown mx-14 p-3 bg-russian-violet rounded-lg">
+          <div class="p-3">
+            <div class="bg-white p-6 shadow-lg">
+            <h4 class="text-2xl font-bold mb-2 text-gray-800">News 1</h4>
+            <p class="text-gray-700" id="news1"></p>
+          </div></div>
+          <div class="p-3">
+            <div class="bg-white p-6 shadow-lg">
+            <h4 class="text-2xl font-bold mb-2 text-gray-800">News 2</h4>
+            <p class="text-gray-700" id="news2"></p>
+          </div></div>
         </div>
       </section>
 
