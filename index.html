@@ -77,48 +77,52 @@
         <div class="flex flex-col mt-4 mx-20">
             <!-- Currency conversion Form -->
             <form
-              class="justify-center py-14 w-full mt-10 flex flex-col md:flex-row border rounded-xl bg-purple-mountain-majesty text-white 
+              class="py-14 w-full mt-10 border rounded-md text-white 
               bg-[url('https://images.unsplash.com/photo-1580519542036-c47de6196ba5?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471')]"
               id="currency-form"
               action="">
-              <div>
-                <label class="inline-block w-10 font-semibold" for="input-currency">From:</label>
-                <input class="border rounded-md text-russian-violet" type="text" id="input-amt" placeholder=" Enter Amount" />
-                <select class="mb-6 md:mr-6 border text-black rounded-md p-0.5" name="currency" id="currency">
-                  <option value="GBP">GBP</option>
-                  <option value="USD">USD</option>
-                  <option value="AUD">AUD</option>
-                  <option value="EUR">EUR</option>
-                  <option value="EUR">HKD</option>
-                  <option value="EUR">JPY</option>
-                  <option value="EUR">WON</option>
-                </select>
+              <div class="flex justify-center">
+                <div>
+                  <label class="inline-block w-10 font-semibold" for="input-currency">From:</label>
+                  <input class="border rounded-md text-russian-violet" type="text" id="input-amt" placeholder=" Enter Amount" />
+                  <select class="mb-6 md:mr-6 border text-black rounded-md p-0.5" name="currency" id="currency">
+                    <option value="GBP">GBP</option>
+                    <option value="USD">USD</option>
+                    <option value="AUD">AUD</option>
+                    <option value="EUR">EUR</option>
+                    <option value="EUR">HKD</option>
+                    <option value="EUR">JPY</option>
+                    <option value="EUR">WON</option>
+                  </select>
+                </div>
+                <div>
+                  <label class="inline-block w-5 font-semibold" for="output-currency">To:</label>
+                  <input class="border rounded-md text-russian-violet" type="text" id="output-amt" placeholder=" Enter Amount" />
+                  <select class="border text-black rounded-md p-0.5" name="currency" id="currency">
+                    <option value="GBP">GBP</option>
+                    <option value="USD">USD</option>
+                    <option value="AUD">AUD</option>
+                    <option value="EUR">EUR</option>
+                    <option value="EUR">HKD</option>
+                    <option value="EUR">JPY</option>
+                    <option value="EUR">WON</option>
+                  </select>
+                </div>
+                <div class="pl-10">
+                  <button
+                  class="inline-block w-20 font-semibold bg-russian-violet rounded-md border border-russian-violet"
+                  id="confirm-btn">Confirm
+                </button>
+                </div>
               </div>
-              <div>
-                <label class="inline-block w-5 font-semibold" for="output-currency">To:</label>
-                <input class="border rounded-md text-russian-violet" type="text" id="output-amt" placeholder=" Enter Amount" />
-                <select class="border text-black rounded-md p-0.5" name="currency" id="currency">
-                  <option value="GBP">GBP</option>
-                  <option value="USD">USD</option>
-                  <option value="AUD">AUD</option>
-                  <option value="EUR">EUR</option>
-                  <option value="EUR">HKD</option>
-                  <option value="EUR">JPY</option>
-                  <option value="EUR">WON</option>
-                </select>
-              </div>
-              <div class="pl-10">
-                <button 
-                class="inline-block w-20 font-semibold bg-russian-violet rounded-md border border-russian-violet" 
-                id="confirm-btn">Confirm
-              </button>
+              <div class="flex justify-center">
+                <div id="conversion-info"
+                class="w-1/5 flex py-4 justify-center items-center text-gray-200 rounded-md border bg-russian-violet ">
+                1 GBP = 1.25 USD</div>
               </div>
             </form>
-            <div
-            class="w-full flex py-6 justify-center items-center text-russian-violet rounded-b-sm border"
-                    >Conversion Info
-                    </div>
-                  </div>
+          
+          </div>
         <div class="flex-1 grid md:grid-cols-2 my-10 content-center text-center border py-10 myown mx-14 p-3 bg-russian-violet rounded-lg">
           <div class="p-3">
             <div class="bg-white p-6 shadow-lg">
