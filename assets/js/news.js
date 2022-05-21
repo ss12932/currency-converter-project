@@ -1,6 +1,8 @@
 const currency1 = document.getElementById("currency1");
 const currency2 = document.getElementById("currency2");
 const form = document.getElementById("currency-form");
+const newsTitle1 = document.getElementById("news-title-1");
+const newsTitle2 = document.getElementById("news-title-2");
 
 // Translation object
 const dictionary = {
@@ -39,9 +41,9 @@ function getNews(currency) {
 }
 
 // Render articles from API data
-function renderArticles(articles) {
-  console.log(articles);
+function renderArticles(rawData) {
   // select random article
+  console.log(rawData.articles[Math.floor(Math.random() * 10)]);
 }
 
 // Display news article based on what has been selected on left
