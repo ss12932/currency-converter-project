@@ -4,48 +4,53 @@ const form = document.getElementById("currency-form");
 
 // Translation object
 const dictionary = {
-    "USD": "american dollar",
-    "EUR": "european euro",
-    "JPY": "japanese yen", 
-    "GBP": "british pound",
-    "CHF": "swiss franc",
-    "CAD": "canadian dollar"
-}
+  USD: "american dollar",
+  EUR: "european euro",
+  JPY: "japanese yen",
+  GBP: "british pound",
+  CHF: "swiss franc",
+  CAD: "canadian dollar",
+};
 
 // Add event listener to Confirm button
-form.addEventListener("submit", function(e) {
-    e.preventDefault();
-    renderNews();
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+  renderNews();
 });
 
 // Get selected currencies and output dictionary text
 function getCurrencies() {
-    let currencyA = currency1.value
-    let currencyB = currency2.value;
-    let currencyText = [dictionary[currencyA], dictionary[currencyB]];
-    console.log(currencyText);
-    return currencyText;
+  let currencyA = currency1.value;
+  let currencyB = currency2.value;
+  let currencyText = [dictionary[currencyA], dictionary[currencyB]];
+  console.log(currencyText);
+  return currencyText;
 }
 
 // Call news API
 function getNews(currency) {
-    fetch(`https://gnews.io/api/v4/search?q=${currency}&token=bd6c99e57cde29f3b05d86b65ebe86f8`)
-  .then(response => response.json())
-  .then(data => console.log(data));
+  fetch(
+    `https://gnews.io/api/v4/search?q=${currency}&token=bd6c99e57cde29f3b05d86b65ebe86f8`
+  )
+    .then((response) => response.json())
+    .then((data) => {
+      renderArticles(data);
+    });
 }
 
-
+// Render articles from API data
+function renderArticles(articles) {
+  console.log(articles);
+  // select random article
+}
 
 // Display news article based on what has been selected on left
 
-// Display news article based on what has been selected on right
+// Display news article based on what has been on right
 
 // Execute all of above on click of Confirm button
 function renderNews() {
-    const currencies = getCurrencies();
-    getNews(currencies[0]);
-    getNews(currencies[1]);
-};
-
-
-
+  const currencies = getCurrencies();
+  getNews(currencies[0]);
+  getNews(currencies[1]);
+}
