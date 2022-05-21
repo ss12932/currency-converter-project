@@ -12,4 +12,4 @@ const initialLoad = () => {
 };
 
 // $(document).ready(initialLoad);
-$(window).on("load", initialLoad);
+$(document).ready(initialLoad);
