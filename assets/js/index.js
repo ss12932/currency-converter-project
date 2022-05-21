@@ -1,5 +1,4 @@
 "use strict";
-
 const ctx = document.getElementById("chart-1").getContext("2d");
 const ctx2 = document.getElementById("chart-2").getContext("2d");
 const myChart = new Chart(ctx, {
