@@ -4,12 +4,12 @@ const form = document.getElementById("currency-form");
 
 // Translation object
 const dictionary = {
-    "USD": "American Dollar",
-    "EUR": "European Euro",
-    "JPY": "Japanese Yen", 
-    "GBP": "British Pound",
-    "CHF": "Swiss Franc",
-    "CAD": "Canadian Dollar"
+    "USD": "american dollar",
+    "EUR": "european euro",
+    "JPY": "japanese yen", 
+    "GBP": "british pound",
+    "CHF": "swiss franc",
+    "CAD": "canadian dollar"
 }
 
 // Add event listener to Confirm button
@@ -18,14 +18,22 @@ form.addEventListener("submit", function(e) {
     renderNews();
 });
 
-// Get selected currencies
+// Get selected currencies and output dictionary text
 function getCurrencies() {
-    let inputA = currency1.options[currency1.selectedIndex].text;
-    let inputB = currency2.options[currency2.selectedIndex].text;
-    console.log(inputA + inputB);
+    let currencyA = currency1.value
+    let currencyB = currency2.value;
+    let currencyText = [dictionary[currencyA], dictionary[currencyB]];
+    console.log(currencyText);
+    return currencyText;
 }
 
 // Call news API
+function getNews(currency) {
+    fetch(`https://gnews.io/api/v4/search?q=${currency}&token=bd6c99e57cde29f3b05d86b65ebe86f8`)
+  .then(response => response.json())
+  .then(data => console.log(data));
+}
+
 
 
 // Display news article based on what has been selected on left
@@ -34,7 +42,9 @@ function getCurrencies() {
 
 // Execute all of above on click of Confirm button
 function renderNews() {
-    getCurrencies();
+    const currencies = getCurrencies();
+    getNews(currencies[0]);
+    getNews(currencies[1]);
 };
 
 
