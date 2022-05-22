@@ -1,10 +1,14 @@
 const form = document.getElementById("currency-form");
 const currency1 = document.getElementById("currency1");
 const currency2 = document.getElementById("currency2");
-const newsTitle1 = document.getElementById("news-title-1");
-const newsTitle2 = document.getElementById("news-title-2");
 const newsDescr1 = document.getElementById("news1");
 const newsDescr2 = document.getElementById("news2");
+const newsLink1 = document.getElementById("link1");
+const newsLink2 = document.getElementById("link2");
+const newsImage1 = document.getElementById("newsImage1");
+const newsImage2 = document.getElementById("newsImage2");
+const newsImageLink1 = document.getElementById("newsImageLink1");
+const newsImageLink2 = document.getElementById("newsImageLink2");
 
 // Translation object
 const dictionary = {
@@ -27,7 +31,6 @@ function getNewsCurrencies() {
   let currencyA = currency1.value;
   let currencyB = currency2.value;
   let currencyText = [dictionary[currencyA], dictionary[currencyB]];
-  console.log(currencyText);
   return currencyText;
 }
 
@@ -62,14 +65,20 @@ async function getNews2(currency) {
 // Render article 1 from API data
 function renderArticle1(rawData) {
   let article = rawData.articles[Math.floor(Math.random() * 10)];
-  newsTitle1.innerHTML = article["title"];
+  newsLink1.innerHTML = article["title"];
+  newsLink1.setAttribute("href", article["url"]);
+  newsImage1.setAttribute("src", article["image"]);
+  newsImageLink1.setAttribute("href", article["url"]);
   newsDescr1.innerHTML = article["description"];
 }
 
 // Render article 2 from API data
 function renderArticle2(rawData) {
   let article = rawData.articles[Math.floor(Math.random() * 10)];
-  newsTitle2.innerHTML = article["title"];
+  newsLink2.innerHTML = article["title"];
+  newsLink2.setAttribute("href", article["url"]);
+  newsImage2.setAttribute("src", article["image"]);
+  newsImageLink2.setAttribute("href", article["url"]);
   newsDescr2.innerHTML = article["description"];
 }
 
