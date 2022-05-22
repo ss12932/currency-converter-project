@@ -38,10 +38,12 @@ function fetchCurrencies(baseCurrency, targetCurrency, amount) {
 }
 
 function updateOutput(finalAmount, rate) {
-  output.value = finalAmount;
+  output.value = finalAmount.toFixed(2);
   // inputCurrency.innerHTML = baseCurrency.value;
   // outputValue.innerHTML = rate;
   // outputCurrency.innerHTML = targetCurrency.value;
-  let convInfo = `1 ${baseCurrency.value} = ${rate} ${targetCurrency.value}`;
+  let convInfo = `1 ${baseCurrency.value} = ${rate.toFixed(2)} ${
+    targetCurrency.value
+  }`;
   convSpan.textContent = convInfo;
 }
