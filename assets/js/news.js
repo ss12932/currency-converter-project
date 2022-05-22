@@ -1,15 +1,17 @@
+const form = document.getElementById("currency-form");
 const currency1 = document.getElementById("currency1");
 const currency2 = document.getElementById("currency2");
-const form = document.getElementById("currency-form");
 const newsTitle1 = document.getElementById("news-title-1");
 const newsTitle2 = document.getElementById("news-title-2");
+const newsDescr1 = document.getElementById("news1");
+const newsDescr2 = document.getElementById("news2");
 
 // Translation object
 const dictionary = {
   USD: "american dollar",
   EUR: "european euro",
   JPY: "japanese yen",
-  GBP: "british pound",
+  GBP: "sterling pound",
   CHF: "swiss franc",
   CAD: "canadian dollar",
 };
@@ -21,7 +23,7 @@ form.addEventListener("submit", function (e) {
 });
 
 // Get selected currencies and output dictionary text
-function getCurrencies() {
+function getNewsCurrencies() {
   let currencyA = currency1.value;
   let currencyB = currency2.value;
   let currencyText = [dictionary[currencyA], dictionary[currencyB]];
@@ -29,36 +31,51 @@ function getCurrencies() {
   return currencyText;
 }
 
-// Call news API
-async function getNews(currency) {
+// Call news API for article 1
+async function getNews1(currency) {
   fetch(
-    `https://gnews.io/api/v4/search?q=${currency}&token=bd6c99e57cde29f3b05d86b65ebe86f8`
+    `https://gnews.io/api/v4/search?q=${currency}&token=f08b6baa59c218cbab3e1f9ff05e4091`
   )
     .then((response) => {
       console.log(response);
       return response.json();
     })
     .then((data) => {
-      renderArticle(data);
+      renderArticle1(data);
     });
 }
 
-// Render articles from API data
-function renderArticle(rawData) {
-  // select random article
+// Call news API for article 2
+async function getNews2(currency) {
+  fetch(
+    `https://gnews.io/api/v4/search?q=${currency}&token=f08b6baa59c218cbab3e1f9ff05e4091`
+  )
+    .then((response) => {
+      console.log(response);
+      return response.json();
+    })
+    .then((data) => {
+      renderArticle2(data);
+    });
+}
+
+// Render article 1 from API data
+function renderArticle1(rawData) {
   let article = rawData.articles[Math.floor(Math.random() * 10)];
-  console.log(article["title"]);
-  // Title 1
   newsTitle1.innerHTML = article["title"];
+  newsDescr1.innerHTML = article["description"];
+}
+
+// Render article 2 from API data
+function renderArticle2(rawData) {
+  let article = rawData.articles[Math.floor(Math.random() * 10)];
   newsTitle2.innerHTML = article["title"];
+  newsDescr2.innerHTML = article["description"];
 }
 
 // Execute all of above on click of Confirm button
 function renderNews() {
-  const currencies = getCurrencies();
-  getNews(currencies[0]);
-  getNews(currencies[1]);
+  const currencies = getNewsCurrencies();
+  getNews1(currencies[0]);
+  getNews2(currencies[1]);
 }
-
-// Notes
-// Do I need two functions for rendering article 1 and 2?
