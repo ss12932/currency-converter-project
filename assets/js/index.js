@@ -19,13 +19,13 @@ form.addEventListener("submit", function (e) {
   fetchCurrencies(currency1.value, currency2.value, input.value);
 });
 
-function fetchCurrencies(baseCurrency, targetCurrency, amount) {
-  fetch(
+async function fetchCurrencies(baseCurrency, targetCurrency, amount) {
+  await fetch(
     `https://v6.exchangerate-api.com/v6/d14eeee6a4f935aab34c335e/pair/${baseCurrency}/${targetCurrency}/${amount}`
   )
     .then((response) => response.json())
-    .then((response) => {
-      const { conversion_result, conversion_rate } = response;
+    .then((data) => {
+      const { conversion_result, conversion_rate } = data;
       updateOutput(conversion_result, conversion_rate);
     })
     .catch((err) => console.error(err));
