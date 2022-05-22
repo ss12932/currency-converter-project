@@ -30,25 +30,25 @@ function getCurrencies() {
 }
 
 // Call news API
-function getNews(currency) {
+async function getNews(currency) {
   fetch(
     `https://gnews.io/api/v4/search?q=${currency}&token=bd6c99e57cde29f3b05d86b65ebe86f8`
   )
     .then((response) => response.json())
     .then((data) => {
-      renderArticles(data);
+      renderArticle(data);
     });
 }
 
 // Render articles from API data
-function renderArticles(rawData) {
+function renderArticle(rawData) {
   // select random article
-  console.log(rawData.articles[Math.floor(Math.random() * 10)]);
+  let article = rawData.articles[Math.floor(Math.random() * 10)];
+  console.log(article["title"]);
+  // Title 1
+  newsTitle1.innerHTML = article["title"];
+  newsTitle2.innerHTML = article["title"];
 }
-
-// Display news article based on what has been selected on left
-
-// Display news article based on what has been on right
 
 // Execute all of above on click of Confirm button
 function renderNews() {
@@ -56,3 +56,6 @@ function renderNews() {
   getNews(currencies[0]);
   getNews(currencies[1]);
 }
+
+// Notes
+// Do I need two functions for rendering article 1 and 2?
