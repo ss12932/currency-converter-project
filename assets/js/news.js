@@ -34,7 +34,10 @@ async function getNews(currency) {
   fetch(
     `https://gnews.io/api/v4/search?q=${currency}&token=bd6c99e57cde29f3b05d86b65ebe86f8`
   )
-    .then((response) => response.json())
+    .then((response) => {
+      console.log(response);
+      return response.json();
+    })
     .then((data) => {
       renderArticle(data);
     });

@@ -5,8 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Money Mail Homepage</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com/css2?family=Cormorant:wght@400;500;600;700&display=swap">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com/css2?family=Cormorant:wght@400;500;600;700&display=swap"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <script src="https://cdn.tailwindcss.com"></script>
 
     <script>
@@ -20,20 +23,20 @@
           },
           extend: {
             fontFamily: {
-        'cormorant': ['"Cormorant"', 'serif']
-      },
+              cormorant: ['"Cormorant"', "serif"],
+            },
             colors: {
               "sea-blue": "#73b9d7",
               "sky-blue": "#9de6e8",
               "peach-puff": "#f9dbbdff",
               "light-pink": "#ffa5abff",
-              "blush": "#da627dff",
+              blush: "#da627dff",
               "maroon-x-11": "#a53860ff",
               "dark-sienna": "#450920ff",
               "russian-violet": "#231942ff",
               "purple-navy": "#5e548eff",
               "purple-mountain-majesty": "#9f86c0ff",
-              "lilac": "#be95c4ff",
+              lilac: "#be95c4ff",
               "pink-lavender": "#e0b1cbff",
             },
           },
@@ -51,21 +54,32 @@
   </head>
   <body class="flex flex-col min-h-screen font-cormorant">
     <!-- Header -->
-    <header class="header flex justify-between py-6 px-4 bg-white shadow-lg bg-russian-violet text-white">
+    <header
+      class="header flex justify-between py-6 px-4 bg-white shadow-lg bg-russian-violet text-white"
+    >
       <div class="flex w-1/2 justify-between">
         <!-- Logo -->
         <div class="flex">
-          <div class="place-self-center"><img src="./assets/images/logo/logodraft1.png" class="h-12 pr-2"/>
+          <div class="place-self-center hover:scale-125 transition">
+            <img src="./assets/images/logo/logodraft1.png" class="h-12 pr-2" />
           </div>
           <div class="mx-2 pr-2 text-5xl font-semibold"><p>MoneyMail</p></div>
-            <!-- Moment.js date and time -->
-        <div class="date-timer place-self-center text-1xl font-bold"></div>
-      </div>
+          <!-- Moment.js date and time -->
+          <div class="date-timer place-self-center text-1xl font-bold"></div>
         </div>
+      </div>
       <!-- Right Hand Side Nav Bar -->
       <nav class="flex items-center">
-        <a class="font-semibold hover:bg-white py-3 px-2 no-underline rounded uppercase hover:text-russian-violet" href="./index.html">Home</a>
-        <a class="font-semibold hover:bg-white py-3 px-2 no-underline rounded uppercase hover:text-russian-violet" href="./team.html">About Us</a>
+        <a
+          class="font-semibold hover:bg-white py-3 px-2 no-underline rounded uppercase hover:text-russian-violet"
+          href="./index.html"
+          >Home</a
+        >
+        <a
+          class="font-semibold hover:bg-white py-3 px-2 no-underline rounded uppercase hover:text-russian-violet"
+          href="./team.html"
+          >About Us</a
+        >
       </nav>
     </header>
 
@@ -74,67 +88,112 @@
       <!-- Currency Section -->
       <section>
         <div class="flex flex-col mt-4 mx-20">
-            <!-- Currency conversion Form -->
-            <form
-              class="py-14 w-full mt-10 border rounded-md text-white 
-              bg-[url('https://images.unsplash.com/photo-1580519542036-c47de6196ba5?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471')]"
-              id="currency-form"
-              action="">
-              <div class="flex justify-center">
-                <div>
-                  <label class="inline-block w-10 font-semibold" for="input-currency">From:</label>
-                  <input class="border rounded-md text-russian-violet" type="text" id="input-amt" placeholder=" Enter Amount" />
-                  <select class="mb-6 md:mr-6 border text-black rounded-md p-0.5" name="currency" id="currency1">
-                    <option value="GBP">GBP</option>
-                    <option value="USD">USD</option>
-                    <option value="EUR">EUR</option>
-                    <option value="JPY">JPY</option>
-                    <option value="CHF">CHF</option>
-                    <option value="CAD">CAD</option>
-                  </select>
-                </div>
-                <div>
-                  <label class="inline-block w-5 font-semibold" for="output-currency">To:</label>
-                  <input class="border rounded-md text-russian-violet" type="text" id="output-amt" placeholder=" Enter Amount" />
-                  <select class="border text-black rounded-md p-0.5" name="currency" id="currency2">
-                    <option value="GBP">GBP</option>
-                    <option value="USD">USD</option>
-                    <option value="EUR">EUR</option>
-                    <option value="JPY">JPY</option>
-                    <option value="CHF">CHF</option>
-                    <option value="CAD">CAD</option>
-                  </select>
-                </div>
-                <div class="pl-10">
-                  <button
+          <!-- Currency conversion Form -->
+          <form
+            class="py-14 w-full mt-10 border rounded-md text-white bg-[url('https://images.unsplash.com/photo-1580519542036-c47de6196ba5?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471')]"
+            id="currency-form"
+            action=""
+          >
+            <div class="flex justify-center">
+              <div>
+                <label
+                  class="inline-block w-10 font-semibold"
+                  for="input-currency"
+                  >From:</label
+                >
+                <input
+                  class="border rounded-md text-russian-violet"
+                  type="text"
+                  id="input-amt"
+                  placeholder=" Enter Amount"
+                />
+                <select
+                  class="mb-6 md:mr-6 border text-black rounded-md p-0.5"
+                  name="currency"
+                  id="currency1"
+                >
+                  <option value="GBP">GBP</option>
+                  <option value="USD">USD</option>
+                  <option value="EUR">EUR</option>
+                  <option value="JPY">JPY</option>
+                  <option value="CHF">CHF</option>
+                  <option value="CAD">CAD</option>
+                </select>
+              </div>
+              <div>
+                <label
+                  class="inline-block w-5 font-semibold"
+                  for="output-currency"
+                  >To:</label
+                >
+                <input
+                  class="border rounded-md text-russian-violet"
+                  type="text"
+                  id="output-amt"
+                  placeholder=" Enter Amount"
+                />
+                <select
+                  class="border text-black rounded-md p-0.5"
+                  name="currency"
+                  id="currency2"
+                >
+                  <option value="GBP">GBP</option>
+                  <option value="USD">USD</option>
+                  <option value="EUR">EUR</option>
+                  <option value="JPY">JPY</option>
+                  <option value="CHF">CHF</option>
+                  <option value="CAD">CAD</option>
+                </select>
+              </div>
+              <div class="pl-10">
+                <button
                   class="inline-block w-20 font-semibold bg-russian-violet rounded-md border border-russian-violet"
-                  id="confirm-btn">Confirm
+                  id="confirm-btn"
+                >
+                  Confirm
                 </button>
-                </div>
               </div>
-              <div class="flex justify-center">
-                <div id="conversion-info"
-                class="w-1/5 flex py-4 justify-center items-center text-gray-200 rounded-md border bg-russian-violet ">
-                1 GBP = 1.25 USD</div>
+            </div>
+            <div class="flex justify-center">
+              <div
+                id="conversion-info"
+                class="w-1/5 flex py-8 justify-center items-center text-gray-200 rounded-md border bg-russian-violet"
+              >
+                <span class="h-5" id="conv-span"></span>
+                <!-- <span class="p-0.5">1</span> -->
+                <!-- <span id="input-currency" class="p-0.5"></span>
+                <span> = </span>
+                <span id="output-value" class="p-0.5"></span>
+                <span id="output-currency" class="p-0.5"></span> -->
               </div>
-            </form>
-          
+            </div>
+          </form>
+        </div>
+        <div
+          class="flex-1 grid md:grid-cols-2 my-10 content-center text-center border py-10 myown mx-14 p-5 rounded-lg bg-[url('https://images.unsplash.com/photo-1586074299757-dc655f18518c?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687')]"
+        >
+          <div class="p-3">
+            <div class="bg-white p-6 shadow-lg">
+              <h4
+                class="text-2xl font-bold mb-2 text-gray-800"
+                id="news-title-1"
+              >
+                News title 1
+              </h4>
+              <p class="text-gray-700" id="news1">content 1</p>
+            </div>
           </div>
-        <div class="flex-1 grid md:grid-cols-2 my-10 content-center text-center border py-10 myown mx-14 p-5 rounded-lg bg-[url('https://images.unsplash.com/photo-1586074299757-dc655f18518c?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687')]">
           <div class="p-3">
             <div class="bg-white p-6 shadow-lg">
-            <h4 class="text-2xl font-bold mb-2 text-gray-800"
-            id="news-title-1">News title 1</h4>
-            <p class="text-gray-700" 
-            id="news1">content 1</p>
-          </div></div>
-          <div class="p-3">
-            <div class="bg-white p-6 shadow-lg">
-            <h4 class="text-2xl font-bold mb-2 text-gray-800"
-            id="news-title-2">News title 2</h4>
-            <p class="text-gray-700" 
-            id="news2">content 2</p>
-          </div></div>
+              <h4
+                class="text-2xl font-bold mb-2 text-gray-800"
+                id="news-title-2"
+              >
+                News title 2
+              </h4>
+              <p class="text-gray-700" id="news2">content 2</p>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -144,35 +203,40 @@
           <h2 class="text-6xl mb-6">Charts</h2>
           <div class="flex flex-col gap-2 md:flex-row w-full justify-around">
             <div>
-                <!-- chart will be embedded in here -->
-                <canvas id="chart-1" width="400" height="400"></canvas></div>
-              <div>
-                <!-- chart will be embedded in here -->
-                <canvas id="chart-2" width="400" height="400"></canvas></div>
-          </div>
+              <!-- chart will be embedded in here -->
+              <canvas id="chart-1" width="400" height="400"></canvas>
+            </div>
+            <div>
+              <!-- chart will be embedded in here -->
+              <canvas id="chart-2" width="400" height="400"></canvas>
+            </div>
           </div>
         </div>
       </section>
     </main>
-    <footer class="py-6 border bg-russian-violet text-white text-center">&copy; Money Mail All Rights Reserved.</footer>
+    <footer class="py-6 border bg-russian-violet text-white text-center">
+      &copy; Money Mail All Rights Reserved.
+    </footer>
     <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  ></script>
-  <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"
-    integrity="sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  ></script>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
-  <script
-  src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.3/moment.min.js"
-  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="./assets/js/utility.js"></script>
-  <script src="./assets/js/news.js"></script>
-  <script src="./assets/js/index.js"></script>
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"
+      integrity="sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.3/moment.min.js"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./assets/js/utility.js"></script>
+    <script src="./assets/js/news.js"></script>
+    <script src="./assets/js/index.js"></script>
   </body>
 </html>
