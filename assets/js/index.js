@@ -3,10 +3,10 @@ const input = document.getElementById("input-amt");
 const baseCurrency = document.getElementById("currency1");
 const targetCurrency = document.getElementById("currency2");
 const output = document.getElementById("output-amt");
-
-const inputCurrency = document.getElementById("input-currency");
-const outputValue = document.getElementById("output-value");
-const outputCurrency = document.getElementById("output-currency");
+// const inputCurrency = document.getElementById("input-currency");
+// const outputValue = document.getElementById("output-value");
+// const outputCurrency = document.getElementById("output-currency");
+const convSpan = document.getElementById("conv-span");
 
 function getCurrencies() {
   var currencyInputs = [currency1.value, currency2.value];
@@ -39,8 +39,9 @@ function fetchCurrencies(baseCurrency, targetCurrency, amount) {
 
 function updateOutput(finalAmount, rate) {
   output.value = finalAmount;
-
-  inputCurrency.innerHTML = baseCurrency.value;
-  outputValue.innerHTML = rate;
-  outputCurrency.innerHTML = targetCurrency.value;
+  // inputCurrency.innerHTML = baseCurrency.value;
+  // outputValue.innerHTML = rate;
+  // outputCurrency.innerHTML = targetCurrency.value;
+  let convInfo = `1 ${baseCurrency.value} = ${rate} ${targetCurrency.value}`;
+  convSpan.textContent = convInfo;
 }
