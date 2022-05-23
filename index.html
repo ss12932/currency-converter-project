@@ -100,7 +100,9 @@
             id="currency-form"
             action=""
           >
-            <div class="flex justify-center">
+            <div
+              class="flex flex-col items-center lg:items-start lg:flex-row justify-center"
+            >
               <div>
                 <label
                   class="inline-block w-10 font-semibold"
@@ -152,9 +154,9 @@
                   <option value="CAD">CAD</option>
                 </select>
               </div>
-              <div class="pl-10">
+              <div class="pl:0 lg:pl-10">
                 <button
-                  class="inline-block w-20 font-semibold bg-russian-violet rounded-md border border-russian-violet"
+                  class="my-10 lg:my-0 inline-block w-20 font-semibold bg-russian-violet rounded-md border border-russian-violet"
                   id="confirm-btn"
                 >
                   Confirm
@@ -164,7 +166,7 @@
             <div class="flex justify-center">
               <div
                 id="conversion-info"
-                class="w-1/5 flex py-8 justify-center items-center text-gray-200 rounded-md border bg-russian-violet"
+                class="w-[22.5rem] flex py-8 justify-center items-center text-gray-200 rounded-md border bg-russian-violet"
               >
                 <span class="h-5" id="conv-span"></span>
                 <!-- <span class="p-0.5">1</span> -->
