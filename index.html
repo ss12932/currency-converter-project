@@ -55,17 +55,21 @@
   <body class="flex flex-col min-h-screen font-cormorant">
     <!-- Header -->
     <header
-      class="header flex justify-between py-6 px-4 bg-white shadow-lg bg-russian-violet text-white"
+      class="header flex justify-center flex-col items-center md:items-start md:justify-between py-6 px-4 bg-white shadow-lg bg-russian-violet text-white md:flex-row"
     >
-      <div class="flex w-1/2 justify-between">
+      <div class="flex w-1/2 justify-center md:justify-between">
         <!-- Logo -->
-        <div class="flex">
+        <div class="flex flex-col lg:flex-row">
           <div class="place-self-center hover:scale-125 transition">
             <img src="./assets/images/logo/logodraft1.png" class="h-12 pr-2" />
           </div>
-          <div class="mx-2 pr-2 text-5xl font-semibold"><p>MoneyMail</p></div>
+          <div class="flex mx-2 pr-2 text-5xl font-semibold mb-4">
+            <p>MoneyMail</p>
+          </div>
           <!-- Moment.js date and time -->
-          <div class="date-timer place-self-center text-1xl font-bold"></div>
+          <div
+            class="flex date-timer place-self-center text-1xl font-bold"
+          ></div>
         </div>
       </div>
       <!-- Right Hand Side Nav Bar -->
