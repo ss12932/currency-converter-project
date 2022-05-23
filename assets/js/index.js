@@ -3,9 +3,6 @@ const input = document.getElementById("input-amt");
 const baseCurrency = document.getElementById("currency1");
 const targetCurrency = document.getElementById("currency2");
 const output = document.getElementById("output-amt");
-// const inputCurrency = document.getElementById("input-currency");
-// const outputValue = document.getElementById("output-value");
-// const outputCurrency = document.getElementById("output-currency");
 const convSpan = document.getElementById("conv-span");
 const historyList = document.getElementById("historyList");
 let convHist = 0;
@@ -56,9 +53,6 @@ async function fetchCurrencies(baseCurrency, targetCurrency, amount) {
 
 function updateOutput(finalAmount, rate) {
   output.value = finalAmount.toFixed(2);
-  // inputCurrency.innerHTML = baseCurrency.value;
-  // outputValue.innerHTML = rate;
-  // outputCurrency.innerHTML = targetCurrency.value;
   let convInfo = `1 ${baseCurrency.value} = ${rate.toFixed(2)} ${
     targetCurrency.value
   }`;
