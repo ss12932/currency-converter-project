@@ -1,4 +1,4 @@
-# MonetMail
+# MoneyMail
 
 ## This is the repository for the currency-news project - MoneyMail
 
