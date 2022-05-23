@@ -7,16 +7,12 @@ const output = document.getElementById("output-amt");
 // const outputValue = document.getElementById("output-value");
 // const outputCurrency = document.getElementById("output-currency");
 const convSpan = document.getElementById("conv-span");
-
-function getCurrencies() {
-  var currencyInputs = [currency1.value, currency2.value];
-  console.log(currencyInputs);
-  return currencyInputs;
-}
+let convHist = 0;
 
 form.addEventListener("submit", function (e) {
   e.preventDefault();
   fetchCurrencies(currency1.value, currency2.value, input.value);
+  console.log(input.value + " " + currency1.value + " = " + currency2.value);
 });
 
 function fetchCurrencies(baseCurrency, targetCurrency, amount) {
@@ -46,4 +42,30 @@ function updateOutput(finalAmount, rate) {
     targetCurrency.value
   }`;
   convSpan.textContent = convInfo;
+  //Add to search history
+  localStorage.setItem(
+    `Search ${convHist + 1}`,
+    input.value +
+      " " +
+      currency1.value +
+      " = " +
+      finalAmount.toFixed(2) +
+      " " +
+      currency2.value
+  );
+  if (convHist < 9) {
+    convHist++;
+  } else {
+    convHist = 0;
+  }
+  console.log(convHist);
+}
+
+// Store currency search history
+function searchHistory(convInfo) {
+  console.log(convInfo);
+  for (let i = 0; i < 10; i++) {
+    localStorage.setItem(`search${i}`, convInfo);
+  }
+  // localStorage.getItem("lastname");
 }
