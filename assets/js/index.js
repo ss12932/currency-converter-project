@@ -12,7 +12,10 @@ let convHist = 0;
 
 form.addEventListener("submit", function (e) {
   e.preventDefault();
-  fetchCurrencies(currency1.value, currency2.value, input.value);
+
+  if (!input.value.length === 0) {
+    fetchCurrencies(currency1.value, currency2.value, input.value);
+  }
   console.log(input.value + " " + currency1.value + " = " + currency2.value);
 });
 
