@@ -2,7 +2,7 @@
 
 const dateStart = () => {
   const dateTimer = () => {
-    let currDate = moment().format("dddd Do MMMM YYYY, hh:mm:ss");
+    let currDate = moment().format("dddd Do MMMM YYYY, HH:mm:ss");
     $(".date-timer").text(currDate);
   };
   setInterval(dateTimer, 1000);
