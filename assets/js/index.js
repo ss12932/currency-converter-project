@@ -27,6 +27,7 @@ function getHistory() {
       );
     }
   }
+  convHist = localStorage.getItem("Number of Searches");
 }
 
 getHistory();
@@ -71,11 +72,8 @@ function updateOutput(finalAmount, rate) {
     `Search ${convHist + 1}`,
     moment().format("DD/MM/YYYY, h:mm:ssa") + ":   " + histText
   );
-  if (convHist < 10) {
-    convHist++;
-  } else {
-    convHist = 0;
-  }
+  convHist++;
+  localStorage.setItem("Number of Searches", convHist);
   let listItem = document.createElement("li");
   historyList.appendChild(listItem);
   listItem.appendChild(
