@@ -1,4 +1,4 @@
-# currency-news-project
+# MoneyMail
 
 ## This is the repository for the currency-news project - MoneyMail
 
@@ -10,9 +10,21 @@ MoneyMail. An app that allows you to exchange currencies with a click of a butto
 
 ```
 AS a user
-I WANT to input a value to acquire a currency exchange and retrieve relevant news regarding the chosen currencies
-SO THAT I am able to view the currency rate  and latest news before I commit to converting.
+I WANT to input a value to acquire a currency exchange
+and retrieve relevant news regarding the chosen currencies,
+
+SO THAT I am able to view the currency rate  and latest news
+before I commit to converting.
 ```
+
+### Technologies used
+
+1. HTML
+2. JavaScript
+3. jQuery
+4. tailwindcss
+5. Google Fonts
+6. moment.js
 
 ### Deployed Link
 
