@@ -10,8 +10,10 @@ MoneyMail. An app that allows you to exchange currencies with a click of a butto
 
 ```
 AS a user
-I WANT to input a value to acquire a currency exchange and retrieve relevant news regarding the chosen currencies
-SO THAT I am able to view the currency rate  and latest news before I commit to converting.
+I WANT to input a value to acquire a currency exchange
+and retrieve relevant news regarding the chosen currencies,
+SO THAT I am able to view the currency rate  and latest news
+before I commit to converting.
 ```
 
 ### Deployed Link
