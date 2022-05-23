@@ -32,12 +32,13 @@ function getHistory() {
 
 getHistory();
 
-function fetchCurrencies(baseCurrency, targetCurrency, amount) {
-  fetch(
+async function fetchCurrencies(baseCurrency, targetCurrency, amount) {
+  await fetch(
     `https://v6.exchangerate-api.com/v6/d14eeee6a4f935aab34c335e/pair/${baseCurrency}/${targetCurrency}/${amount}`
   )
     .then((response) => {
       if (response.ok) {
+        console.log(response);
         return response.json();
       } else {
         throw new Error("Failed to retrieve Data");
