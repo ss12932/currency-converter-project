@@ -55,17 +55,23 @@
   <body class="flex flex-col min-h-screen font-cormorant">
     <!-- Header -->
     <header
-      class="header flex justify-between py-6 px-4 bg-white shadow-lg bg-russian-violet text-white"
+      class="header flex justify-center flex-col items-center md:items-start md:justify-between py-6 px-4 bg-white shadow-lg bg-russian-violet text-white md:flex-row"
     >
-      <div class="flex w-1/2 justify-between">
+      <div class="flex w-1/2 justify-center md:justify-between">
         <!-- Logo -->
-        <div class="flex">
+        <div class="flex justify-center flex-col lg:flex-row lg:items-cente">
           <div class="place-self-center hover:scale-125 transition">
             <img src="./assets/images/logo/logodraft1.png" class="h-12 pr-2" />
           </div>
-          <div class="mx-2 pr-2 text-5xl font-semibold"><p>MoneyMail</p></div>
+          <div
+            class="flex justify-center items-center mx-2 pr-2 text-5xl font-semibold mb-4 lg:mb-0"
+          >
+            <p>MoneyMail</p>
+          </div>
           <!-- Moment.js date and time -->
-          <div class="date-timer place-self-center text-1xl font-bold"></div>
+          <div
+            class="flex date-timer place-self-center text-1xl font-bold"
+          ></div>
         </div>
       </div>
       <!-- Right Hand Side Nav Bar -->
@@ -94,8 +100,10 @@
             id="currency-form"
             action=""
           >
-            <div class="flex justify-center">
-              <div>
+            <div
+              class="flex flex-col items-center lg:items-start lg:flex-row justify-center"
+            >
+              <div class="flex flex-col md:block">
                 <label
                   class="inline-block w-10 font-semibold"
                   for="input-currency"
@@ -120,7 +128,7 @@
                   <option value="CAD">CAD</option>
                 </select>
               </div>
-              <div>
+              <div class="flex flex-col md:block">
                 <label
                   class="inline-block w-5 font-semibold"
                   for="output-currency"
@@ -146,9 +154,9 @@
                   <option value="CAD">CAD</option>
                 </select>
               </div>
-              <div class="pl-10">
+              <div class="pl:0 lg:pl-10">
                 <button
-                  class="inline-block w-20 font-semibold bg-russian-violet rounded-md border border-russian-violet"
+                  class="my-10 lg:my-0 inline-block w-20 font-semibold bg-russian-violet rounded-md border border-russian-violet"
                   id="confirm-btn"
                 >
                   Confirm
@@ -158,7 +166,7 @@
             <div class="flex justify-center">
               <div
                 id="conversion-info"
-                class="w-1/5 flex py-8 justify-center items-center text-gray-200 rounded-md border bg-russian-violet"
+                class="w-[22.5rem] flex py-8 justify-center items-center text-gray-200 rounded-md border bg-russian-violet"
               >
                 <span class="h-5" id="conv-span"></span>
                 <!-- <span class="p-0.5">1</span> -->
