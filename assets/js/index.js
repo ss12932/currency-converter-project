@@ -7,6 +7,7 @@ const output = document.getElementById("output-amt");
 // const outputValue = document.getElementById("output-value");
 // const outputCurrency = document.getElementById("output-currency");
 const convSpan = document.getElementById("conv-span");
+const historyList = document.getElementById("historyList");
 let convHist = 0;
 
 form.addEventListener("submit", function (e) {
@@ -14,6 +15,21 @@ form.addEventListener("submit", function (e) {
   fetchCurrencies(currency1.value, currency2.value, input.value);
   console.log(input.value + " " + currency1.value + " = " + currency2.value);
 });
+
+// Render search history
+function getHistory() {
+  for (let i = 0; i < localStorage.length; i++) {
+    if (localStorage[i] !== null) {
+      let listItem = document.createElement("li");
+      historyList.appendChild(listItem);
+      listItem.appendChild(
+        document.createTextNode(localStorage.getItem(`Search ${i + 1}`))
+      );
+    }
+  }
+}
+
+getHistory();
 
 function fetchCurrencies(baseCurrency, targetCurrency, amount) {
   fetch(
@@ -43,29 +59,26 @@ function updateOutput(finalAmount, rate) {
   }`;
   convSpan.textContent = convInfo;
   //Add to search history
+  let histText =
+    input.value +
+    " " +
+    currency1.value +
+    " = " +
+    finalAmount.toFixed(2) +
+    " " +
+    currency2.value;
   localStorage.setItem(
     `Search ${convHist + 1}`,
-    input.value +
-      " " +
-      currency1.value +
-      " = " +
-      finalAmount.toFixed(2) +
-      " " +
-      currency2.value
+    moment().format("DD/MM/YYYY, h:mm:ssa") + ":   " + histText
   );
-  if (convHist < 9) {
+  if (convHist < 10) {
     convHist++;
   } else {
     convHist = 0;
   }
-  console.log(convHist);
-}
-
-// Store currency search history
-function searchHistory(convInfo) {
-  console.log(convInfo);
-  for (let i = 0; i < 10; i++) {
-    localStorage.setItem(`search${i}`, convInfo);
-  }
-  // localStorage.getItem("lastname");
+  let listItem = document.createElement("li");
+  historyList.appendChild(listItem);
+  listItem.appendChild(
+    document.createTextNode(localStorage.getItem(`Search ${convHist}`))
+  );
 }

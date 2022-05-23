@@ -116,5 +116,5 @@ function renderNews() {
   const currencies = getNewsCurrencies();
   // getNews1(currencies[0]);
   // getNews2(currencies[1]);
-  // currencies.forEach((el, i) => getNews(el, i));
+  currencies.forEach((el, i) => getNews(el, i));
 }
