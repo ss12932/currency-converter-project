@@ -28,7 +28,7 @@ before I commit to converting.
 
 ### Deployed Link
 
-Click [https://ss12932.github.io/currency-news-project/](HERE!) to go to the page.
+Click [https://ss12932.github.io/currency-news-project/](https://ss12932.github.io/currency-news-project/) to go to the page.
 
 ### Github Repository Link
 
