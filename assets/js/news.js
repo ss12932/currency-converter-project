@@ -29,7 +29,7 @@ function getNewsCurrencies() {
 // Call news API for articles
 async function getNews(currency, i) {
   await fetch(
-    `https://gnews.io/api/v4/search?q=${currency}&token=bd6c99e57cde29f3b05d86b65ebe86f8`
+    `https://gnews.io/api/v4/search?q=${currency}&token=f08b6baa59c218cbab3e1f9ff05e4091`
   )
     .then((response) => {
       console.log(response);
