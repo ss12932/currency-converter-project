@@ -9,10 +9,7 @@ let convHist = 0;
 
 form.addEventListener("submit", function (e) {
   e.preventDefault();
-
-  if (!input.value.length === 0) {
-    fetchCurrencies(currency1.value, currency2.value, input.value);
-  }
+  fetchCurrencies(currency1.value, currency2.value, input.value);
   console.log(input.value + " " + currency1.value + " = " + currency2.value);
 });
 
@@ -37,6 +34,7 @@ async function fetchCurrencies(baseCurrency, targetCurrency, amount) {
     `https://v6.exchangerate-api.com/v6/d14eeee6a4f935aab34c335e/pair/${baseCurrency}/${targetCurrency}/${amount}`
   )
     .then((response) => {
+      console.log(response);
       if (response.ok) {
         console.log(response);
         return response.json();
